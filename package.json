@@ -1,0 +1,14 @@
+{
+  "name": "postcss-uncompass",
+  "version": "1.0.0",
+  "description": "Replace compass CSS3 mixins with regular css standard declarations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Francesco Bedussi",
+  "license": "ISC",
+  "dependencies": {
+    "postcss": "^5.0.19"
+  }
+}
