@@ -16,6 +16,12 @@ module.exports = postcss.plugin('uncompass', function myplugin(options) {
                     if (!parsed) {
                         parsed = atRule.params.match(/(display)-(flex)/);
                     }
+					if (!parsed && atRule.params === 'inline-block') {
+                        parsed = [];
+						parsed[0] = '@include inline-block';
+                        parsed[1] = 'display';
+                        parsed[2] = 'inline-block';
+					}
                     if (parsed) {
                         atRule.remove();
                         rule.append(parsed[1] + ': ' + parsed[2] + ';');
